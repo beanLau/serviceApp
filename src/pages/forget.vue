@@ -1,6 +1,6 @@
 <template>
  <div>
-     <x-header title="忘记密码" ></x-header>
+    <head-top headerTitle="忘记密码"></head-top>
     <div class="login-content">
         <!-- <tab v-model="currentTabIndex">
             <tab-item selected @on-item-click="currentTabIndex = 0">快捷登录</tab-item>
@@ -37,6 +37,7 @@ export default {
   },
 
   components: {
+    headTop,
     XInput,
     XButton,
     Group,
@@ -55,6 +56,5 @@ export default {
 </script>
 <style lang='less' scoped>
 .login-content {
-  
 }
 </style>

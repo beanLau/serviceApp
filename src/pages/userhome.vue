@@ -1,6 +1,6 @@
 <template>
  <div>
-     <x-header title="忘记密码" ></x-header>
+     <head-top headerTitle="首页" :showBack="false"></head-top>
     <div class="login-content">
         <!-- <tab v-model="currentTabIndex">
             <tab-item selected @on-item-click="currentTabIndex = 0">快捷登录</tab-item>
@@ -20,11 +20,13 @@
             <x-button :gradients="['#1D62F0', '#19D5FD']" @click.native="toLogin">提交</x-button>
         </box>
     </div>
+    <foot-tabbar></foot-tabbar>
  </div>
 </template>
 
 <script>
 import headTop from "../components/headerTop";
+import footTabbar from "../components/footTabbar";
 import { XInput, Group, XButton, Cell, Tab, TabItem, Box } from "vux";
 export default {
   data() {
@@ -37,6 +39,8 @@ export default {
   },
 
   components: {
+    headTop,
+    footTabbar,
     XInput,
     XButton,
     Group,
@@ -55,6 +59,5 @@ export default {
 </script>
 <style lang='less' scoped>
 .login-content {
-  
 }
 </style>

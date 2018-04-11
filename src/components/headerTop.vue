@@ -1,5 +1,7 @@
 <template>
-    
+    <x-header :left-options="{showBack:showBack}" @on-click-back="$router.go(-1)" :title="headerTitle" >
+
+    </x-header>
 </template>
 
 <script>
@@ -16,6 +18,10 @@ export default {
     showRight:{
       type:Boolean,
       default:false
+    },
+    headerTitle:{
+      type:String,
+      default:'报修APP'
     }
   },
   components: {},

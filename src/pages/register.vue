@@ -1,6 +1,7 @@
 <template>
  <div>
-     <x-header title="注册" ></x-header>
+     <!-- <x-header title="注册" ></x-header> -->
+     <head-top headerTitle="注册"></head-top>
     <div class="login-content">
         <box gap="10px 10px">
             <button-tab v-model="buttonIndex">
@@ -38,6 +39,7 @@ export default {
   },
 
   components: {
+    headTop,
     XInput,
     XButton,
     Group,

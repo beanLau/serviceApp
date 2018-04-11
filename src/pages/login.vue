@@ -1,6 +1,7 @@
 <template>
  <div>
-    <x-header :left-options="{showBack: false}" title="登录" ></x-header>
+    <!-- <x-header :left-options="{showBack: false}" title="登录" ></x-header> -->
+    <head-top headerTop="登录" :showBack="false"></head-top>
     <div class="login-content">
         <tab v-model="currentTabIndex">
             <tab-item selected @on-item-click="currentTabIndex = 0">快捷登录</tab-item>
@@ -36,6 +37,7 @@
 </template>
 
 <script>
+import {mapState, mapMutations} from 'vuex'
 import headTop from "../components/headerTop";
 import { XInput, Group, XButton, Cell, Tab, TabItem, Box,XSwitch } from "vux";
 export default {
@@ -50,6 +52,7 @@ export default {
   },
 
   components: {
+    headTop,
     XInput,
     XButton,
     Group,
@@ -60,10 +63,20 @@ export default {
     XSwitch 
   },
   mounted() {},
-  computed: {},
+  computed: {
+    ...mapState([
+        'userInfo', 'geohash'
+    ]),
+  },
 
   methods: {
-    toLogin() {},
+    ...mapMutations([
+        'SAVE_ORDER'
+    ]),
+    toLogin() {
+      //router.push({ path: 'register', query: { plan: 'private' }})
+      this.$router.push('/userhome');
+    },
     changeMemory(){}
   }
 };
