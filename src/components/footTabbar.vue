@@ -1,5 +1,5 @@
 <template>
-    <tabbar>
+    <tabbar class="userTabbar">
       <tabbar-item :selected="$route.path.indexOf('userhome') !== -1" :link="$route.path.indexOf('userhome') !== -1 ? $route.path:'/userhome'">
         <img slot="icon" src="../assets/images/homeActive.png" v-if="$route.path.indexOf('userhome') !== -1">
         <img slot="icon" src="../assets/images/home.png" v-else>
@@ -51,5 +51,9 @@ export default {
 <style>
 .weui-tabbar__label{
     margin: 0;
+}
+.userTabbar .weui-tabbar__icon img {
+    width: 85% !important;
+    height: 85% !important;
 }
 </style>
