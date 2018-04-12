@@ -141,6 +141,7 @@ export default {
   height: 100%;
 }
 .userhome-content {
+    padding-top: 48px;
     padding-bottom: 50px;
 }
 .align-middle {
