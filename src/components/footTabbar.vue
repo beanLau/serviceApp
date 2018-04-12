@@ -1,5 +1,5 @@
 <template>
-    <tabbar class="userTabbar">
+    <tabbar class="userTabbar" style="position:fixed;">
       <tabbar-item :selected="$route.path.indexOf('userhome') !== -1" :link="$route.path.indexOf('userhome') !== -1 ? $route.path:'/userhome'">
         <img slot="icon" src="../assets/images/homeActive.png" v-if="$route.path.indexOf('userhome') !== -1">
         <img slot="icon" src="../assets/images/home.png" v-else>

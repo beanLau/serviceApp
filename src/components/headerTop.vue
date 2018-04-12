@@ -1,6 +1,8 @@
 <template>
     <x-header :left-options="{showBack:showBack}" @on-click-back="$router.go(-1)" :title="headerTitle" >
-
+      <span slot="right" @click="toRepair">
+          <slot name="right"></slot>
+      </span>
     </x-header>
 </template>
 
@@ -29,7 +31,11 @@ export default {
   computed: {},
 
   mounted() {},
-  methods: {}
+  methods: {
+    toRepair(){
+      this.$emit('torepair');
+    }
+  }
 };
 </script>
 <style lang='less' scoped>

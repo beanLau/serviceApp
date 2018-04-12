@@ -3,10 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import { XHeader } from 'vux'
+import { XHeader,ViewBox } from 'vux'
 import store from './store/'
-
 Vue.component('x-header', XHeader)
+Vue.component('view-box', ViewBox)
 Vue.config.productionTip = false
 
 

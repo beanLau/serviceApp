@@ -42,4 +42,9 @@ body{
   color: #2c3e50;
   
 }
+.vux-marquee-box li {
+    margin: 0;
+    width: 100%;
+    list-style: none;
+}
 </style>
