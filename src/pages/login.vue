@@ -25,7 +25,7 @@
             <x-switch title="记住密码" v-model="memory" @on-change="changeMemory"></x-switch>
         </group>
         <box gap="10px 10px">
-            <x-button :gradients="['#1D62F0', '#19D5FD']" @click.native="toLogin">登录</x-button>
+            <x-button type="primary" @click.native="toLogin">登录</x-button>
         </box>
         <div class="bottom-content">
             <router-link to="register">立即注册</router-link>
@@ -83,6 +83,7 @@ export default {
 </script>
 <style lang='less' scoped>
 .login-content {
+  margin-top: 50px;
   .login-btn {
     margin-top: 40px;
   }

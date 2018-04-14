@@ -47,4 +47,15 @@ body{
     width: 100%;
     list-style: none;
 }
+.weui-cells{
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.weui-btn_plain-primary {
+    color: #3385ff !important;
+    border: 1px solid #3385ff !important;
+}
+.vux-cell-bd.vux-cell-primary > p{
+  margin: 0;
+}
 </style>

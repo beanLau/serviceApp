@@ -19,7 +19,7 @@
             <x-input title="密码" v-model="password" placeholder="请输入密码" keyboard="password"></x-input>
         </group>
         <box gap="10px 10px">
-            <x-button :gradients="['#1D62F0', '#19D5FD']" @click.native="toLogin">注册</x-button>
+            <x-button type="primary" @click.native="toLogin">注册</x-button>
         </box>
     </div>
  </div>
@@ -60,6 +60,6 @@ export default {
 </script>
 <style lang='less' scoped>
 .login-content {
-  
+  margin-top: 50px;
 }
 </style>

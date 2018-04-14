@@ -6,9 +6,10 @@ import Forget from '@/pages/forget'
 import Userhome from '@/pages/userhome'
 import Userorder from '@/pages/userorder'
 import Usermy from '@/pages/usermy'
+import Createorder from '@/pages/createOrder'
 Vue.use(Router)
 
-export default new Router({
+let router =  new Router({
   routes: [
     {
       path: '/',
@@ -25,7 +26,8 @@ export default new Router({
     },{
       path:'/userhome',
       name:'userhome',
-      component:Userhome
+      component:Userhome,
+      
     },{
       path:'/userorder',
       name:'userorder',
@@ -34,6 +36,14 @@ export default new Router({
       path:'/usermy',
       name:'usermy',
       component:Usermy
+    },{
+      path:'/createorder',
+      name:'createorder',
+      component:Createorder
     }
   ]
 })
+// router.afterEach((to, from, next) => {
+//   console.log(this);
+// });
+export default router;

@@ -42,13 +42,17 @@
                 </masker>
             </div>
         </div>
+        <new-order v-if="isShowModal" :socketData="socketData" @hideNewOrder="hideNewOrder"></new-order>
         <foot-tabbar></foot-tabbar>
  </div>
 </template>
 
 <script>
+
 import headTop from "../components/headerTop";
 import footTabbar from "../components/footTabbar";
+import newOrder from "../components/newOrder";
+import socket from '../mixins/polling'
 import {
   XInput,
   Group,
@@ -67,8 +71,11 @@ import {
   FlexboxItem
 } from "vux";
 export default {
+  mixins:[socket],
   data() {
     return {
+      //socketData:null,
+      // isShowModal:false,
       mobile: "",
       password: "",
       code: "",
@@ -104,6 +111,7 @@ export default {
   components: {
     headTop,
     footTabbar,
+    newOrder,
     XInput,
     XButton,
     Group,
@@ -121,7 +129,9 @@ export default {
     FlexboxItem
   },
   mounted() {},
-  computed: {},
+  computed: {
+    
+  },
 
   methods: {
     toLogin() {},
@@ -129,8 +139,16 @@ export default {
       this.listIndex = index;
     },
     toRepair(){
-        console.log('跳转到报修')
+      this.$router.push('/createorder');
     }
+  },
+  watch:{
+    // socketData(value){
+    //   console.log(value);
+    //   if(value == 'aaaa'){
+    //     this.clearTimer();
+    //   }
+    // }
   }
 };
 </script>
